@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 
 const DocCard = (props) => {
-  const notify = () => toast.success("Appointment Cancled ");
+  const notify = () => toast.success("Appointment Canceled ");
   const {
     _id,
     Doctor,
