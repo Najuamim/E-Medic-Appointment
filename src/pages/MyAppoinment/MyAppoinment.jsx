@@ -19,7 +19,7 @@ const MyAppoinment = () => {
   return (
     <Container className="mt-5">
       <h2 className="text-center" style={{ fontSize: "50px" }}>
-        My Appointment2
+        My Appointment
       </h2>
       <Container className="obx">
         {filteredData.map((fdata) => (
