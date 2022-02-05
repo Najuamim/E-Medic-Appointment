@@ -14,7 +14,7 @@ const Dservices = () => {
       
       <Zoom top cascade>
         <h2 className="text-center" style={{ fontSize: "50px" }}>
-          Get Appointment from our Top Doctor
+          Get Appointment2 from our Top Doctor
         </h2>
       </Zoom>
 
