@@ -47,7 +47,7 @@ const ListCard = (props) => {
                
                     <Link className="t-n" to={`/appoinment/${_id}`}>
                     <Button className="w-100" variant="outline-primary">
-                      Get Appoinment
+                      Get Appointment
                     </Button>
                 </Link>
          
