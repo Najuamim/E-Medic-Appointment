@@ -17,12 +17,7 @@ const ComCarousel = () => {
             alt="First slide"
           />
           <Carousel.Caption>
-            <h3>Your Most Trusted Health Partner</h3>
-            <p>
-              A repudiandae ipsam labore ipsa voluptatum quidem quae laudantium
-              quisquam aperiam maiores sunt fugit, deserunt rem suscipit
-              placeat.
-            </p>
+            <h3>Centralized Medical Industry</h3>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item className="bg1">
@@ -33,12 +28,8 @@ const ComCarousel = () => {
           />
 
           <Carousel.Caption>
-            <h3>TOTAL HEALTH CARE SOLUTION</h3>
-            <p>
-              A repudiandae ipsam labore ipsa voluptatum quidem quae laudantium
-              quisquam aperiam maiores sunt fugit, deserunt rem suscipit
-              placeat.
-            </p>
+            <h3>Centralized Medical Industry</h3>
+           
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item className="bg2">
@@ -49,7 +40,7 @@ const ComCarousel = () => {
           />
 
           <Carousel.Caption>
-            <h3>Online Appoinment</h3>
+            <h3>Online Appointment</h3>
             <p>
               Get ALl time support for emergency.We have introduced the principle of family medicine.
             </p>

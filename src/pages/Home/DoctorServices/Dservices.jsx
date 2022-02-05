@@ -11,12 +11,10 @@ const Dservices = () => {
   const [doctorlists] = useDoctorlist();
   return (
     <Container>
-      <p className="text-center" style={{ color: "orange", fontSize: "30px" }}>
-        See Our Specialist Doctors
-      </p>
+      
       <Zoom top cascade>
         <h2 className="text-center" style={{ fontSize: "50px" }}>
-          Get Appoinment from our Top Doctor
+          Get Appointment from our Top Doctor
         </h2>
       </Zoom>
 

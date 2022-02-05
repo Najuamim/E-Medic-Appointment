@@ -6,7 +6,7 @@ import Zoom from "react-medium-image-zoom";
 import "react-medium-image-zoom/dist/styles.css";
 
 const DocCard = (props) => {
-  const notify = () => toast.success("Appoinment Cancled ");
+  const notify = () => toast.success("Appointment Cancled ");
   const {
     _id,
     Doctor,
@@ -21,7 +21,7 @@ const DocCard = (props) => {
 
   const handleDelete = (id) => {
     const isDelete = window.confirm(
-      "Are you sure , you want to cancle appointment ?"
+      "Are you sure , you want to cancel appointment ?"
     );
     if (isDelete) {
       fetch(`https://project-101-doctor.herokuapp.com/users-info/${id}`, {

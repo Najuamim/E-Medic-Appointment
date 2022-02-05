@@ -20,7 +20,7 @@ const MyAppoinmentCard = (props) => {
 
   const handleDelete = (id) => {
     const isDelete = window.confirm(
-      "Are you sure , you want to cancle appointment ?"
+      "Are you sure , you want to cancel appointment ?"
     );
     if (isDelete) {
       fetch(`https://project-101-doctor.herokuapp.com/users-info/${id}`, {
@@ -42,7 +42,7 @@ const MyAppoinmentCard = (props) => {
               <Col lg={6}>
                 <h3>Appointed Doctor : {Doctor}</h3>
                 <p>
-                  Appoinment Status : {
+                  Appointment Status : {
                     apstatus ? ( <Badge  pill bg="success" text="dark">
                       {apstatus}
                     </Badge>) : (
@@ -64,7 +64,7 @@ const MyAppoinmentCard = (props) => {
                   onClick={() => handleDelete(_id)}
                   variant="outline-danger"
                 >
-                  Cancle Appoinment
+                  Cancle Appointment
                 </Button>
               </Col>
               <Col lg={2}></Col>
