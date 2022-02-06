@@ -102,7 +102,7 @@ const Navigation = () => {
                       title={user.displayName}
                       id="basic-nav-dropdown"
                     >
-                      <NavDropdown.Item as={Link} to="/myappoinment">
+                      <NavDropdown.Item as={Link} to="/myappointment">
                         My Appointment
                       </NavDropdown.Item>
                         <NavDropdown.Item as={Link} to="/empres">
