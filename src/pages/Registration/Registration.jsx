@@ -7,14 +7,14 @@ import axios from "axios";
 
 import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 import initializeAuthentication from "../../firebase/firebase.init";
-import { Link, useHistory, useLocation } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
 
 initializeAuthentication();
 const Registration = () => {
   const { registerUser, SetUser, auth, updateProfile } = useAuth();
   const location = useLocation();
-  const history = useHistory();
+  const navigate = useNavigate();
   const genRandom = (num) => {
     return Math.floor(Math.random() * num) + 1;
   };
@@ -49,7 +49,7 @@ const Registration = () => {
         }).then(() => {
           localStorage.setItem("isAuth", "true");
           saveUser(email, name);
-          history.push(location.state?.from || "/home");
+          navigate(location.state?.from || "/home");
         });
       })
       .catch((error) => {});
@@ -63,7 +63,7 @@ const Registration = () => {
         const user = result.user;
         saveUser(user.email, user.displayName);
         localStorage.setItem("isAuth", "true");
-        history.push(location.state?.from || "/home");
+        navigate(location.state?.from || "/home");
       })
       .catch((error) => {});
   };
@@ -87,7 +87,7 @@ const Registration = () => {
           </Col>
           <Col lg={6} className="mt-5 slide-in-elliptic-top-fwd">
             <p className="">
-              <Link to="/login">Already Registerd ? Login here</Link>
+              <Link to="/login">Already Registered ? Login here</Link>
             </p>
             <p className="">
               <Link to="/addnewdoctor">Are You a Doctor ? Register here</Link>

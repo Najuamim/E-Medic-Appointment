@@ -18,7 +18,7 @@ const CreatePrescription = () => {
   const [editorState, setEditorState] = useState(() =>
     EditorState.createEmpty()
   );
-  const notify = () => toast.success("Successfully Prescribed");
+  const notify = () => toast.success("Succssfully Prescribed");
   const {
     register,
     handleSubmit,

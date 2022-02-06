@@ -12,21 +12,20 @@ const MDCard = (props) => {
     department,
     img,
   } = props.doctor;
-  const notify = () => toast.success("Doctor Deleted Successfully");
+  const notify = () => toast.success("Doctor Deleted");
   const handleDelete = (id) => {
     const isDelete = window.confirm(
-      "Are you sure , you want to delete the doctor ?"
+      "Are you sure , you want to remove the doctor ?"
     );
     if (isDelete) {
       fetch(`https://project-101-doctor.herokuapp.com/doctorlist/${id}`, {
         method: "DELETE",
       });
-    
+    }
     setTimeout(() => {
       notify();
       window.location.reload();
     }, 1000);
-  }
   };
   return (
     //

@@ -11,9 +11,8 @@ const Dservices = () => {
   const [doctorlists] = useDoctorlist();
   return (
     <Container>
-      
       <Zoom top cascade>
-        <h2 className="text-center" style={{ fontSize: "50px" }}>
+        <h2 className="text-center" style={{ fontSize: "50px",color:"tomato" }}>
           Get Appointment from our Top Doctor
         </h2>
       </Zoom>

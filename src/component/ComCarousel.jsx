@@ -17,7 +17,7 @@ const ComCarousel = () => {
             alt="First slide"
           />
           <Carousel.Caption>
-            <h3>Centralized Medical Industry</h3>
+           
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item className="bg1">
@@ -28,8 +28,7 @@ const ComCarousel = () => {
           />
 
           <Carousel.Caption>
-            <h3>Centralized Medical Industry</h3>
-           
+            
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item className="bg2">
