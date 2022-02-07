@@ -22,7 +22,6 @@ const ManageDoctor = () => {
   const [morder, setMorder] = useState([]);
   const [filteredData, setFIlteredData] = useState([]);
   const { register, handleSubmit } = useForm();
-  const notify = () => toast.warn("No Result Found ");
   const onSubmit = (data) => {
     srch(data.svalue);
   };
@@ -30,9 +29,6 @@ const ManageDoctor = () => {
     setFIlteredData(
       morder.filter((mor) => mor.name.toLowerCase().includes(data))
     );
-    if (filteredData.length === 0) {
-      notify();
-    }
   };
 
   useEffect(() => {

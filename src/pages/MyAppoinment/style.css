@@ -1,8 +1,0 @@
-.obx{
-  height: 100vh;
-  overflow-y: scroll;
-  width: 200rem;
-}
-.obx::-webkit-scrollbar {
-    display: none;
-}
