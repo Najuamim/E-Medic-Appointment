@@ -87,10 +87,7 @@ const Registration = () => {
           </Col>
           <Col lg={6} className="mt-5 slide-in-elliptic-top-fwd">
             <p className="">
-              <Link to="/login">Already Registered ? Login here</Link>
-            </p>
-            <p className="">
-              <Link to="/addnewdoctor">Are You a Doctor ? Register here</Link>
+              <Link to="/login">Already Registerd ? Login here</Link>
             </p>
             <form className="from-container" onSubmit={handleSubmit(onSubmit)}>
               <input
