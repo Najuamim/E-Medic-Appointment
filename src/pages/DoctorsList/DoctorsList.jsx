@@ -22,7 +22,10 @@ const DoctorsList = () => {
   const [morder, setMorder] = useState([]);
   const [filteredData, setFIlteredData] = useState([]);
   const { register, handleSubmit } = useForm();
-  const notify = () => toast.warn("No Result Found ");
+  //notify user about search result
+  // const notify = () => toast.warn("Doctor Found ");
+  // const notify2 = () => toast.warn("Doctor Not Found ");
+  
   const onSubmit = (data) => {
     srch(data.svalue);
   };
@@ -44,9 +47,15 @@ const DoctorsList = () => {
     setFIlteredData(
       morder.filter((mor) => mor.name.toLowerCase().includes(data))
     );
-    if (filteredData.length === 0) {
-      notify();
-    }
+    //notify search result
+    // if (filteredData.length > 0) {
+    //   notify();
+    // }
+    // else
+    // {
+    //   notify2();
+    // }
+    
   };
   return (
     <Container className="c-body">
