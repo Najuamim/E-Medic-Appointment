@@ -18,7 +18,7 @@ const MyAppointment = () => {
   }, [morder, user.email]);
   return (
     <Container className="mt-5">
-      <h2 className="text-center" style={{ fontSize: "50px", color:"tomato" }}>
+      <h2 className="text-center" style={{ fontSize: "50px",color:"tomato" }}>
         My Appointment
       </h2>
       <Container className="obx">

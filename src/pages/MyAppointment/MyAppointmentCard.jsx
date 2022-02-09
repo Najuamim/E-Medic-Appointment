@@ -3,8 +3,10 @@ import { Card, Container, Button, Row, Col, Badge } from "react-bootstrap";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
+
 const MyAppointmentCard = (props) => {
   const notify = () => toast.success("Appointment Canceled ");
+
 
   const {
     _id,
@@ -20,7 +22,7 @@ const MyAppointmentCard = (props) => {
 
   const handleDelete = (id) => {
     const isDelete = window.confirm(
-      "Are you sure , you want to canceled appointment ?"
+      "Are you sure , you want to cancel appointment ?"
     );
     if (isDelete) {
       fetch(`https://project-101-doctor.herokuapp.com/users-info/${id}`, {
@@ -58,9 +60,10 @@ const MyAppointmentCard = (props) => {
                   <p className="fw-bold">Appointed Date : {apdate.substr(0,10)}</p>
                   <p className="fw-bold">Appointed Time : {aptime}</p>
                 </div>
-                <p className=" fw-bold">Problem Details</p>
+                <p className="text-center fw-bold">Problem Details</p>
                 <Card.Text>{detail}</Card.Text>
                 <Button
+                  className={apstatus === "Approved" ? "d-none" : ""}
                   onClick={() => handleDelete(_id)}
                   variant="outline-danger"
                 >

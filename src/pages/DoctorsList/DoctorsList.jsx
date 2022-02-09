@@ -22,10 +22,7 @@ const DoctorsList = () => {
   const [morder, setMorder] = useState([]);
   const [filteredData, setFIlteredData] = useState([]);
   const { register, handleSubmit } = useForm();
-  //notify user about search result
-  // const notify = () => toast.warn("Doctor Found ");
-  // const notify2 = () => toast.warn("Doctor Not Found ");
-  
+  const notify = () => toast.warn("No Result Found ");
   const onSubmit = (data) => {
     srch(data.svalue);
   };
@@ -41,21 +38,16 @@ const DoctorsList = () => {
     setFIlteredData(doctorlists);
   };
   const hcc = (xx) => {
+    console.log(morder.filter((mor) => mor.department === xx));
     setFIlteredData(morder.filter((mor) => mor.department === xx));
   };
   const srch = (data) => {
     setFIlteredData(
       morder.filter((mor) => mor.name.toLowerCase().includes(data))
     );
-    //notify search result
-    // if (filteredData.length > 0) {
-    //   notify();
-    // }
-    // else
-    // {
-    //   notify2();
-    // }
-    
+    if (filteredData.length === 0) {
+      notify();
+    }
   };
   return (
     <Container className="c-body">

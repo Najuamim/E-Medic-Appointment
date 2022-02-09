@@ -54,7 +54,6 @@ function App() {
               <Route path="/registration" element={<Registration />} />
               <Route path="/doctorlogin" element={<DocotorLogin />} />
               <Route path="/lab" element={<Lab />} />
-
               <Route path="/*" element={<PrivateOutlet />}>
                 <Route path="appointment/:pakId" element={<Appointment />} />
                 <Route path="empres" element={<EMPmain />} />

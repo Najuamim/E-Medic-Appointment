@@ -21,7 +21,7 @@ const DocCard = (props) => {
 
   const handleDelete = (id) => {
     const isDelete = window.confirm(
-      "Are you sure , you want to canceled appointment ?"
+      "Are you sure , you want to cancel appointment ?"
     );
     if (isDelete) {
       fetch(`https://project-101-doctor.herokuapp.com/users-info/${id}`, {

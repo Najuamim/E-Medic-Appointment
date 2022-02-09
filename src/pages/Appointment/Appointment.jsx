@@ -76,7 +76,7 @@ const Appointment = () => {
   return (
     <Container className="mt-5">
       <ToastContainer />
-      <h2 className="text-center" style={{ fontSize: "50px" }}>
+      <h2 className="text-center" style={{ fontSize: "50px",color:"tomato" }}>
         Get Appointment
       </h2>
       <Row>
@@ -151,7 +151,7 @@ const Appointment = () => {
               <div>
                 <textarea
                   style={{
-                    width: "173%",
+                    width: "153%",
                     height: "8rem",
                     border: "1px solid blue",
                     borderRadius: "5px",
@@ -176,7 +176,7 @@ const Appointment = () => {
                 <Button
                   className="roll-in-left btnx"
                   type="Submit"
-                  variant="outline-primary"
+                  variant="outline-success"
                 >
                   Submit Appointment
                 </Button>
