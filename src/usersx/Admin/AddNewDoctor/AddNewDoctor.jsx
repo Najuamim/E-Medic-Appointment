@@ -21,7 +21,7 @@ const AddNewDoctor = () => {
 
   const notify = () => toast.success("Submitted Successfully ");
   const notify2 = () =>
-    toast.warn("A Doctor Already Registerd With this BMDC ");
+    toast.warn("A Doctor Already Registered With this BMDC ");
   const { logout, registerUser, SetUser, auth, updateProfile } = useAuth();
   const { register, handleSubmit } = useForm();
   const [image, setImage] = useState([]);
@@ -133,7 +133,7 @@ const AddNewDoctor = () => {
               />
               <input
                 type="text"
-                placeholder="Chember"
+                placeholder="Chamber"
                 {...register("chember", { required: true })}
               />
               <select {...register("department", { required: true })}>
