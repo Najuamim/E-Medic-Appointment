@@ -76,15 +76,6 @@ const Appointment = () => {
   return (
     <Container className="mt-5">
       <ToastContainer
-        position="top-center"
-        autoClose={5000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
       />
       <h2 className="text-center" style={{ fontSize: "50px", color: "tomato" }}>
         Get Appointment
@@ -111,7 +102,7 @@ const Appointment = () => {
             className="from-container-x mt-5 slide-in-elliptic-top-fwd"
             onSubmit={handleSubmit(onSubmit)}
           >
-            <input
+            <input disabled
               type="text"
               placeholder="Doctor"
               defaultValue={appointments.name}
@@ -121,7 +112,7 @@ const Appointment = () => {
               type="text"
               defaultValue={user.displayName}
               placeholder="Name"
-              {...register("Name", {})}
+              {...register("Name", {required: true})}
             />
             <input
               type="email"
@@ -129,12 +120,7 @@ const Appointment = () => {
               defaultValue={user.email}
               {...register("Email", {})}
             />
-            <input type="number" placeholder="Age" {...register("Age", {})} />
-            {/* <input
-              type="datetime"
-              placeholder="Appoint Date"
-              {...register("apdate", {})}
-            /> */}
+            <input type="number" placeholder="Age" {...register("Age", {required: true})} />
             <DatePicker
               className="w-100"
               {...register("apdate", {})}
@@ -146,27 +132,23 @@ const Appointment = () => {
             <input
               type="time"
               placeholder="Appoint Time"
-              {...register("aptime", {})}
+              {...register("aptime", {required: true })}
             />
-            <select {...register("gender")}>
+            <select {...register("gender",{})}>
               <option value="Male">Male</option>
               <option value="Female">Female</option>
             </select>
             <br />
-            {/* <select {...register("problem")}>
-              <option value="Problem1">Problem1</option>
-              <option value="Problem2">Problem2</option>
-            </select> */}
             <div className="mt-3">
               <div>
                 <textarea
                   style={{
-                    width: "153%",
+                    width: "123%",
                     height: "8rem",
                     border: "1px solid blue",
                     borderRadius: "5px",
                   }}
-                  {...register("detail", {})}
+                  {...register("detail", {required:true})}
                 />
               </div>
               <div>
@@ -185,12 +167,14 @@ const Appointment = () => {
                 <br />
                 <Button
                   className="roll-in-left btnx"
-                  type="Submit"
+                  type="submit"
                   variant="outline-success"
                 >
                   Submit Appointment
                 </Button>
+               
               </div>
+              
             </div>
           </form>
         </Col>

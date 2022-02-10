@@ -133,19 +133,19 @@ const AddNewDoctor = () => {
               />
               <input
                 type="text"
-                placeholder="Visiting Houre"
+                placeholder="Visiting Hour"
                 {...register("time", { required: true })}
               />
               <input
                 type="text"
-                placeholder="Chember"
+                placeholder="Chamber"
                 {...register("chember", { required: true })}
               />
               <select {...register("department", { required: true })}>
                 <option value="Chest">Chest</option>
                 <option value="Medicine">Medicine</option>
                 <option value="Eye">Dermatology</option>
-                <option value="Eye">Psychaiatry</option>
+                <option value="Eye">Psychiatry</option>
                 <option value="Eye">General Physician</option>
                 <option value="Eye">Diabetes</option>
                 <option value="Eye">Neuromedicine</option>

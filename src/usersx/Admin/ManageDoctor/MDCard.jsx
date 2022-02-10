@@ -24,7 +24,7 @@ const MDCard = (props) => {
     }
     setTimeout(() => {
       notify();
-      window.location.reload();
+      // window.location.reload();
     }, 1000);
   };
   return (

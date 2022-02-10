@@ -39,10 +39,6 @@ const ComCarousel = () => {
           />
 
           <Carousel.Caption>
-            <h3>Online Appointment</h3>
-            <p>
-              Get ALl time support for emergency.We have introduced the principle of family medicine.
-            </p>
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>

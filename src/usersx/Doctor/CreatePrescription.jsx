@@ -102,7 +102,7 @@ const CreatePrescription = () => {
                         variant="primary"
                         type="submit"
                       >
-                        Done
+                        Submit Prescription
                       </Button>
                       {/* <Button
                         className="p-3 mb-5 w-25"

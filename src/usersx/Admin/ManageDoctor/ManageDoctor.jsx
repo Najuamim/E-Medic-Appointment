@@ -37,7 +37,8 @@ const ManageDoctor = () => {
       .then((data) => {
         setMorder(data);
       });
-  }, [morder]);
+  }, [filteredData]);
+  console.log(morder);
   const hc = () => {
     setFIlteredData(doctorlists);
   };
