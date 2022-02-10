@@ -19,9 +19,8 @@ const AddNewDoctor = () => {
       .then((data) => SetBmdcx(data.data));
   }, []);
 
-  const notify = () => toast.success("Submitted Successfully ");
-  const notify2 = () =>
-    toast.warn("A Doctor Already Registered With this BMDC ");
+  const notify = () => toast.success("Doctor Added Successfully!");
+  const notify2 = () =>toast.warn("A Doctor Already Registered With this BMDC ");
   const { logout, registerUser, SetUser, auth, updateProfile } = useAuth();
   const { register, handleSubmit } = useForm();
   const [image, setImage] = useState([]);
@@ -34,6 +33,7 @@ const AddNewDoctor = () => {
   };
 
   const bChange = (e) => {
+    // eslint-disable-next-line array-callback-return
     Bmdcx.filter((data) => {
       if (data.bmdc !== e.target.value) {
         console.log("");
@@ -133,7 +133,12 @@ const AddNewDoctor = () => {
               />
               <input
                 type="text"
-                placeholder="Chamber"
+                placeholder="Visiting Houre"
+                {...register("time", { required: true })}
+              />
+              <input
+                type="text"
+                placeholder="Chember"
                 {...register("chember", { required: true })}
               />
               <select {...register("department", { required: true })}>

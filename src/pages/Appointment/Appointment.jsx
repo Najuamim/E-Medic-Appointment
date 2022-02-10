@@ -22,7 +22,7 @@ const Appointment = () => {
   const [presUrl, setPresUrl] = useState("");
   const { register, handleSubmit } = useForm();
   const [startDate, setStartDate] = useState(new Date());
-  const notify = () => toast.success("Submitted Successfully ");
+  const notify = () => toast.success("Submitted Successfully ", {});
   const serverUrl = `https://project-101-doctor.herokuapp.com/doctorlist/${pakId}`;
   useEffect(() => {
     fetch(serverUrl)
@@ -75,8 +75,18 @@ const Appointment = () => {
 
   return (
     <Container className="mt-5">
-      <ToastContainer />
-      <h2 className="text-center" style={{ fontSize: "50px",color:"tomato" }}>
+      <ToastContainer
+        position="top-center"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
+      <h2 className="text-center" style={{ fontSize: "50px", color: "tomato" }}>
         Get Appointment
       </h2>
       <Row>
