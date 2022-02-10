@@ -1,4 +1,4 @@
-# FDOC => E-medic Solution
+E-Medic-Appointment
 After Download the project You have to run from the project directory :
 
 ### `npm install`
