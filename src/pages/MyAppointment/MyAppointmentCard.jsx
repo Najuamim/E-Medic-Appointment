@@ -2,6 +2,7 @@ import React, {  } from "react";
 import { Card, Container, Button, Row, Col, Badge } from "react-bootstrap";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Zoom from "react-medium-image-zoom";
 
 
 const MyAppointmentCard = (props) => {
@@ -39,7 +40,10 @@ const MyAppointmentCard = (props) => {
           <Container>
             <Row>
               <Col lg={4}>
+                <Zoom>
                 <img src={url} alt="" width="390px" height="400px" />
+                 </Zoom>
+              
               </Col>
               <Col lg={6}>
                 <h3>Appointed Doctor : {Doctor}</h3>

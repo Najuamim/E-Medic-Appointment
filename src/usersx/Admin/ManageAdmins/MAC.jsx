@@ -44,7 +44,7 @@ const MAC = (props) => {
               handleDelete(props.data._id);
             }}
           >
-            Delete User
+            Remove as Admin
           </Button>
            <Button
             disabled={props.data.role === "admin" ? true : false}
