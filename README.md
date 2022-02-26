@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # E-Medic-Appointment
+=======
+<h2>E-Medic-Appointment</h2>
+>>>>>>> origin
 After Download the project You have to run from the project directory :
 
 ### `npm install`
